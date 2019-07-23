@@ -1,0 +1,8 @@
+.settings
+.vscode
+bin
+target
+.classpath
+.project
+*.py
+
