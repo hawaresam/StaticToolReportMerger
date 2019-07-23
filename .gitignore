@@ -4,4 +4,5 @@ bin
 target
 .classpath
 .project
+*.py
 
