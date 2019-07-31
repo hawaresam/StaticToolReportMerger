@@ -1,0 +1,12 @@
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\BubbleSort.java:4:	All classes, interfaces, enums and annotations must belong to a named package
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\BubbleSort.java:4:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\BubbleSort.java:6:	Use one line for each declaration, it enhances code readability.
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\BubbleSort.java:7:	Ensure that resources like this Scanner object are closed after use
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\BubbleSort.java:16:	This statement should have braces
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\BubbleSort.java:32:	This statement should have braces
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\Test.java:1:	All classes, interfaces, enums and annotations must belong to a named package
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\Test.java:1:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\Transpose.java:1:	All classes, interfaces, enums and annotations must belong to a named package
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\Transpose.java:1:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\Transpose.java:1:	The utility class name 'Transpose' doesn't match '[A-Z][a-zA-Z0-9]+(Utils?|Helper)'
+C:\Users\320065418\OneDrive - Philips\Desktop\Case Study\FirstProject\testFiles\Transpose.java:3:	Use one line for each declaration, it enhances code readability.
