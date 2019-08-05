@@ -3,10 +3,7 @@ package com.philips;
 import java.util.ArrayList;
 
 import com.philips.model.Tool;
-import com.philips.action.InitializeTools;
-import com.philips.action.ExecuteTools;
-import com.philips.action.ValidateCommand;
-import com.philips.action.MergeFiles;
+import com.philips.action.HelperClass;
 
 public class App 
 {
@@ -15,25 +12,20 @@ public class App
         String configPath=args[0];
 
         ArrayList<Tool> toolobj;
-        InitializeTools initializeobj=new InitializeTools();
-        ExecuteTools executeobj=new ExecuteTools();
-        ValidateCommand validateobj=new ValidateCommand();
+        Tool toolobject=new Tool();
 
-        //initializing the arraylist which contains all the tools
-        toolobj=initializeobj.initializetool(configPath);
+        toolobj=toolobject.initializetool(configPath);
 
         if(toolobj!=null)
         {
             for(int i=0;i<toolobj.size();i++)
             {
-                boolean statusOfExeFile=validateobj.validateFileIsPresent(toolobj.get(i).gettoolExeFile());
-                boolean inputFolderIsPresent=validateobj.validateFileIsPresent(toolobj.get(i).getinputFile());
-                boolean outputFileShouldBeSpecified=validateobj.validateFileShouldBeSpecified(toolobj.get(i).getoutputFile());
-                boolean outputFileFormat=validateobj.validateFileFormatIsCorrect(toolobj.get(i).getoutputFile());
+                boolean valid=HelperClass.validate(toolobj.get(i));
+
                 
-                if(statusOfExeFile==true && inputFolderIsPresent==true && outputFileShouldBeSpecified==true && outputFileFormat==true)
+                if(valid==true)
                 {
-                    boolean processStatus = executeobj.executetool(toolobj.get(i));
+                    toolobject.executetool(toolobj.get(i));
                 }
                 else
                 {
@@ -41,9 +33,7 @@ public class App
                 }
             }
     
-            //merging the files
-            MergeFiles mergeobject=new MergeFiles();
-            boolean mergeStatus = mergeobject.mergefiles(toolobj);
+            HelperClass.mergefiles(toolobj);
         }
         else
         {

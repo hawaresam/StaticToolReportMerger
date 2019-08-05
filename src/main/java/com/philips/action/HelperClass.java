@@ -8,9 +8,9 @@ import java.io.FileReader;
 
 import com.philips.model.Tool;
 
-public class MergeFiles
+public class HelperClass
 {
-    public boolean mergefiles(ArrayList<Tool> toolobj)
+    public static boolean mergefiles(ArrayList<Tool> toolobj)
     {
         try
         {
@@ -67,6 +67,49 @@ public class MergeFiles
         catch(Exception e)
         {
             System.out.println(e.getMessage());
+            return false;
+        }
+    }
+
+    public static boolean validate(Tool toolObject)
+    {
+        boolean statusOfExeFile=validateFileIsPresent(toolObject.gettoolExeFile());
+        boolean inputFolderIsPresent=validateFileIsPresent(toolObject.getinputFile());
+        boolean outputFileShouldBeSpecified=validateFileShouldBeSpecified(toolObject.getoutputFile());
+        boolean outputFileFormat=validateFileFormatIsCorrect(toolObject.getoutputFile());
+
+        if(statusOfExeFile==true && inputFolderIsPresent==true && outputFileShouldBeSpecified==true && outputFileFormat==true)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+    
+    public static boolean validateFileIsPresent(String filename)
+    {
+        File tempFile=new File(filename);
+        boolean exists = tempFile.exists();
+        return exists;
+    }
+    public static boolean validateFileShouldBeSpecified(String filename)
+    {
+        if(filename.equals(null) || filename.equals("")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    public static boolean validateFileFormatIsCorrect(String filename)
+    {
+        File tempFile = new File(filename);
+        if(tempFile.getName().toLowerCase().endsWith(".txt"))
+        {
+            return true;
+        }
+        else
+        {
             return false;
         }
     }
