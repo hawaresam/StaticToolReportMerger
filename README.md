@@ -1,7 +1,7 @@
 Prerequisites :
-	1) The jar files of PMD and Checkstyle are provided in the staticAnalysisTools folder. 
+	1) Make sure that you have pmd.bat and checkstyle jar file.
 	2) Open the config.properties file 
-	3) Change the directory of toolExeFile of both the tools (line no 2 and 7). Give the path where the staticAnalysisTools folder is located in your machine.
+	3) Change the directory of toolExeFile of both the tools (line no 2 and 7). Give the path where the Tool's folder is located in your machine.
 	4) Change the directory of toolInputFile according to your choice.
 	5) Save the changes.
 	6) You can add more static tool analysis tools in this config file.
